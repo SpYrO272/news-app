@@ -18,16 +18,34 @@ export default function PostDetails() {
   const authorUser = users?.find(u => u.id === post?.userId);
   const authorName = authorUser?.name || labels.loading;
 
+  // Fallback Image Handler
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     e.currentTarget.onerror = null;
     e.currentTarget.src = "https://placehold.co/1200x600/e0e0e0/666666?text=Image+Unavailable";
   };
 
+  // Skeleton UI while loading
   if (postLoading || usersLoading || !post) {
     return (
-      <div className={`post-details-wrapper min-vh-100 ${theme === 'dark' ? 'bg-dark text-light' : 'bg-white text-dark'}`}>
-        <div className="container py-5 text-center">
-          <div className="spinner-border text-danger" role="status"></div>
+      <div className={`post-details-wrapper min-vh-100 ${theme === 'dark' ? 'bg-dark text-light' : 'bg-white text-dark'}`} dir={isAr ? 'rtl' : 'ltr'}>
+        <div className="container py-5">
+          <div className="row g-5">
+            <div className="col-lg-4 order-2 order-lg-1">
+              <div className={`skeleton-details-card rounded p-4 ${theme}`}>
+                <div className="skeleton-circle mx-auto mb-3"></div>
+                <div className="skeleton-line-detail mx-auto w-50 mb-4"></div>
+                <div className="skeleton-line-detail w-75 mb-3"></div>
+                <div className="skeleton-line-detail w-60 mb-3"></div>
+              </div>
+            </div>
+            <div className="col-lg-8 order-1 order-lg-2">
+              <div className="skeleton-line-detail w-25 mb-3"></div>
+              <div className="skeleton-line-detail w-100 h-large mb-4"></div>
+              <div className="skeleton-rect w-100 mb-4"></div>
+              <div className="skeleton-line-detail w-100 mb-2"></div>
+              <div className="skeleton-line-detail w-100 mb-2"></div>
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -49,7 +67,7 @@ export default function PostDetails() {
 
         <div className="row g-5">
           
-          {/* LEFT COLUMN: AUTHOR INFO (4 Units) */}
+          {/* Left side */}
           <div className="col-lg-4 order-2 order-lg-1">
             <aside className="sticky-top" style={{ top: '2rem' }}>
               <section className={`author-sidebar-card p-4 rounded shadow-sm themed-author-card ${theme}`}>
@@ -110,7 +128,7 @@ export default function PostDetails() {
             </aside>
           </div>
 
-          {/* RIGHT COLUMN: POST CONTENT (8 Units) */}
+          {/* Right side */}
           <div className="col-lg-8 order-1 order-lg-2">
             <header className="post-header mb-5">
               <div className="cat-badge mb-3">

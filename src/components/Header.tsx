@@ -13,13 +13,9 @@ export default function Header() {
     <header className={`main-header border-bottom ${theme === 'dark' ? 'bg-dark text-light border-secondary' : 'bg-white text-dark'}`} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
       <div className="container py-4 d-flex justify-content-between align-items-center">
         
-        {/* LOGO */}
+  
         <h1 className="logo-text m-0">NEWS<span className="fw-light">VERSE</span></h1>
-
-        {/* CONTROLS */}
         <div className="d-flex align-items-center gap-3">
-          
-          {/* THEME TOGGLE (Sun/Moon) */}
           <button
             className="btn-control theme-toggle"
             onClick={() => dispatch(toggleTheme())}
@@ -28,7 +24,6 @@ export default function Header() {
             {theme === 'light' ? '🌙' : '☀️'}
           </button>
 
-          {/* LANGUAGE TOGGLE (Custom Hover Logic) */}
           <button 
             onClick={() => dispatch(toggleLanguage())} 
             className="btn-toggle-lang"

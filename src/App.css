@@ -9,14 +9,14 @@
   --magazine-red: #ff4d4d;
 }
 
-/* Base Transition for Theme and Language */
+
 body {
   transition: background-color 0.4s ease, color 0.4s ease;
   margin: 0;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-/* Apply themes based on the class applied to the body or main wrapper */
+
 body.light {
   background-color: var(--bg-light);
   color: var(--text-light);
@@ -27,7 +27,7 @@ body.dark {
   color: var(--text-dark);
 }
 
-/* Card Themes */
+
 .card.light {
   background-color: var(--card-light);
   color: var(--text-light);
@@ -40,7 +40,7 @@ body.dark {
   border: 1px solid #333;
 }
 
-/* Global RTL Support Utility */
+
 [dir='rtl'] .ms-auto {
   margin-right: auto !important;
   margin-left: 0 !important;

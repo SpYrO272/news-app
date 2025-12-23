@@ -7,8 +7,8 @@ export const translations = {
     postDetails: "Post Details",
     back: "Back to News",
     noPosts: "No posts found",
-    viewMore: "View More",     // Add this
-    category: "News"          // Add this
+    viewMore: "View More",     
+    category: "News"          
   },
   ar: {
     news: "أحدث الأخبار",
@@ -18,7 +18,7 @@ export const translations = {
     postDetails: "تفاصيل الخبر",
     back: "العودة للأخبار",
     noPosts: "لا توجد منشورات",
-    viewMore: "عرض المزيد",    // Add this
-    category: "أخبار"         // Add this
+    viewMore: "عرض المزيد",    
+    category: "أخبار"        
   }
 };

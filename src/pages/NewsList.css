@@ -1,3 +1,5 @@
+/* ... All your previous CSS remains exactly the same ... */
+
 /* Typography */
 .fw-black { font-weight: 900; }
 .main-section-title { font-size: 3.2rem; line-height: 1; letter-spacing: -2px; }
@@ -37,7 +39,6 @@
   flex-direction: column;
 }
 
-/* Theme Behaviors for Background/Border */
 .themed-card.light {
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
@@ -56,10 +57,9 @@
 
 .news-card-pro:hover {
   transform: translateY(-8px);
-  border-color: #ff4d4d; /* Matches your red accent on hover */
+  border-color: #ff4d4d;
 }
 
-/* Card Elements */
 .cat-tag-pro {
   position: absolute; top: 12px; right: 12px;
   background-color: #ff4d4d; color: white; font-size: 10px;
@@ -71,9 +71,38 @@
 .title-hover-red:hover { color: #ff4d4d !important; }
 .read-more-link { color: #ff4d4d !important; text-decoration: none; font-weight: 800; font-size: 0.8rem; }
 
-/* Load More Button */
 .pro-btn-red {
   background: #ff4d4d; color: white; border: none; padding: 15px 45px;
   font-weight: 800; border-radius: 4px; transition: 0.3s;
 }
 .pro-btn-red:hover { background: #1a1a1a; box-shadow: 0 4px 15px rgba(255, 77, 77, 0.3); }
+
+/* --- SKELETON LOADER STYLES --- */
+.skeleton-box, .skeleton-img, .skeleton-line {
+  background: #e0e0e0;
+  position: relative;
+  overflow: hidden;
+}
+
+.dark .skeleton-box, .dark .skeleton-img, .dark .skeleton-line {
+  background: #333;
+}
+
+.skeleton-box::after, .skeleton-img::after, .skeleton-line::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.skeleton-img { height: 200px; width: 100%; border-radius: 12px 12px 0 0; }
+.skeleton-line { height: 15px; margin-bottom: 10px; border-radius: 4px; }
+.skeleton-line.title { width: 80%; height: 20px; }
+.skeleton-line.meta { width: 40%; }
+.skeleton-line.body { width: 100%; height: 40px; }
