@@ -1,0 +1,47 @@
+/* Theme Variables */
+:root {
+  --bg-light: #ffffff;
+  --bg-dark: #121212;
+  --card-light: #ffffff;
+  --card-dark: #1e1e1e;
+  --text-light: #1a1a1a;
+  --text-dark: #f8f9fa;
+  --magazine-red: #ff4d4d;
+}
+
+/* Base Transition for Theme and Language */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Apply themes based on the class applied to the body or main wrapper */
+body.light {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* Card Themes */
+.card.light {
+  background-color: var(--card-light);
+  color: var(--text-light);
+  border: 1px solid #eee;
+}
+
+.card.dark {
+  background-color: var(--card-dark);
+  color: var(--text-dark);
+  border: 1px solid #333;
+}
+
+/* Global RTL Support Utility */
+[dir='rtl'] .ms-auto {
+  margin-right: auto !important;
+  margin-left: 0 !important;
+}

@@ -1,0 +1,133 @@
+.post-details-wrapper {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #ff4d4d;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.back-link:hover {
+  color: #333;
+}
+
+.bg-dark .back-link:hover {
+  color: #fff;
+}
+
+.cat-badge {
+  display: inline-block;
+  background: #ff4d4d;
+  color: white;
+  padding: 4px 12px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.post-header h1 {
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.magazine-quote {
+  border-left: 5px solid #ff4d4d;
+  font-style: italic;
+  font-size: 1.5rem;
+  background: rgba(255, 77, 77, 0.05);
+  font-weight: 300;
+}
+
+[dir='rtl'] .magazine-quote {
+  border-left: none;
+  border-right: 5px solid #ff4d4d;
+}
+
+.first-letter::first-letter {
+  float: left;
+  font-size: 5rem;
+  line-height: 1;
+  font-weight: bold;
+  margin-right: 15px;
+  color: #ff4d4d;
+}
+
+[dir='rtl'] .first-letter::first-letter {
+  float: right;
+  margin-right: 0;
+  margin-left: 15px;
+}
+
+/* --- THEMED AUTHOR CARD --- */
+.themed-author-card.light {
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+}
+
+.themed-author-card.dark {
+  background-color: #1a1a1a;
+  border: 1px solid #ffffff !important; /* White border for Dark Mode */
+}
+
+/* Visibility fix for details */
+.theme-text-detail {
+  color: #212529; /* Default light mode */
+  text-decoration: none;
+}
+
+.bg-dark .theme-text-detail {
+  color: #f8f9fa !important; /* Clear visibility in Dark Mode */
+}
+
+/* Mission Box */
+.mission-box.light {
+  background-color: #ffffff;
+  color: #212529;
+}
+
+.mission-box.dark {
+  background-color: #2a2a2a;
+  color: #f8f9fa;
+}
+
+/* Typography & Meta */
+.bg-dark .text-muted {
+  color: #aaaaaa !important;
+}
+
+.bg-dark .post-content {
+  color: #e0e0e0;
+}
+
+.author-avatar-large {
+  width: 85px;
+  height: 85px;
+  background: #ff4d4d;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 900;
+  box-shadow: 0 5px 15px rgba(255, 77, 77, 0.3);
+}
+
+.text-danger {
+  color: #ff4d4d !important;
+}
+
+/* Animations */
+.animate-fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
