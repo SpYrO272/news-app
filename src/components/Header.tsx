@@ -28,7 +28,7 @@ export default function Header() {
             onClick={() => dispatch(toggleLanguage())} 
             className="btn-toggle-lang"
           >
-            {lang === 'en' ? 'العربية' : 'English'}
+            {lang === 'en' ? 'Arabic' : 'English'}
           </button>
           
         </div>
